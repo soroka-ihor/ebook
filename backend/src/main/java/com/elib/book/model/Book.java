@@ -26,7 +26,7 @@ public class Book extends BaseEntity {
     @JoinColumn(name = "language_id")
     private Language language;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "cover_id")
     private Cover cover;
 
