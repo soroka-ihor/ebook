@@ -1,4 +1,4 @@
-package com.elib.interfaces;
+package com.elib.storage.files;
 
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
