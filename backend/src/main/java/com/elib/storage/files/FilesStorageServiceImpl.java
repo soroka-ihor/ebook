@@ -1,6 +1,5 @@
-package com.elib.interfaces.implementations;
+package com.elib.storage.files;
 
-import com.elib.interfaces.FilesStorageService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -14,7 +13,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Service
-public class FilesStorageServiceImplementation implements FilesStorageService {
+public class FilesStorageServiceImpl implements FilesStorageService {
 
     @Value("${cover.uploads}")
     private String coversUploadPath;
