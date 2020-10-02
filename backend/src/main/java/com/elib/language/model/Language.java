@@ -10,7 +10,7 @@ import java.util.Set;
 
 @Entity
 @Data
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper=false)
 @Table(name = "languages")
 public class Language extends BaseEntity {
 
