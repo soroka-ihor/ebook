@@ -11,9 +11,9 @@ public interface CoverMapper {
     CoverMapper MAPPER = Mappers.getMapper(CoverMapper.class);
 
     @Mapping(source = "id", target = "coverId")
-    @Mapping(source = "name", target = "coverType")
+    @Mapping(source = "name", target = "fileName")
     CoverDto coverToCoverDto(Cover cover);
 
-    @Mapping(source = "coverType", target = "name")
+    @Mapping(source = "fileName", target = "name")
     Cover coverDtoToSave(CoverDto coverDto);
 }

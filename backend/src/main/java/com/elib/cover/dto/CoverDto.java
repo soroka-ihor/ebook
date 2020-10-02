@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class CoverDto {
-    private Long id;
-    private String name;
+    private Long coverId;
+    private String fileName;
 }

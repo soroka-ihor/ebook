@@ -39,6 +39,6 @@ public class Book extends BaseEntity {
     @Column(name = "description", columnDefinition = "varchar(255)")
     private String description;
 
-    @Column(name = "content_path", columnDefinition = "varchar(50)")
-    private String contentPath;
+    @Column(name = "file_name", columnDefinition = "varchar(50)")
+    private String fileName;
 }
