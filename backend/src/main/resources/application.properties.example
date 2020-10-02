@@ -1,0 +1,27 @@
+##########################################################
+# Database configuration
+##########################################################
+spring.datasource.driver-class-name=
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+##########################################################
+# ORM settings
+##########################################################
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+##########################################################
+# Bind server to listening another port
+##########################################################
+server.port = 
+##########################################################
+# File storage configuration
+##########################################################
+cover.uploads = 
+books.uploads = 
+##########################################################
+# Multipart file for servlet
+##########################################################
+spring.servlet.multipart.max-file-size=
+spring.servlet.multipart.max-request-size=

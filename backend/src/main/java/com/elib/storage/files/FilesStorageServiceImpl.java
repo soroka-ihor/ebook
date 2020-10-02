@@ -1,11 +1,11 @@
 package com.elib.storage.files;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
@@ -15,15 +15,15 @@ import java.nio.file.Paths;
 @Service
 public class FilesStorageServiceImpl implements FilesStorageService {
 
-    @Value("${cover.uploads}")
-    private String coversUploadPath;
+    //@Value("${cover.uploads}")
+    private String coversUploadPath = "c:/covers/"; // <--- temporary hardcoded. will be corrected
 
-    @Value("${books.uploads}")
-    private String booksUploadPath;
+    //@Value("${books.uploads}")
+    private String booksUploadPath = "c:/books/"; // <--- temporary hardcoded. will be corrected
 
-    private final Path coverUploadsFolder = Paths.get(coversUploadPath);
+    private Path coverUploadsFolder = Paths.get(coversUploadPath);
 
-    private final Path bookUploadsFolder = Paths.get(booksUploadPath);
+    private Path bookUploadsFolder = Paths.get(booksUploadPath);
 
     @Override
     public void init() {
