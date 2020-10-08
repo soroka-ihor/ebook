@@ -11,6 +11,11 @@ public interface AuthorMapper {
 
     AuthorMapper MAPPER = Mappers.getMapper(AuthorMapper.class);
 
+    @Mapping(source = "id", target = "id")
     @Mapping(source = "name", target = "authorName")
     AuthorDto authorToAuthorDto(Author author);
+
+    @Mapping(source = "id", target = "id")
+    @Mapping(source = "authorName", target = "name")
+    Author authorDtoToAuthor(AuthorDto author);
 }
