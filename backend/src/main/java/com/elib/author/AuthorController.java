@@ -18,12 +18,12 @@ public class AuthorController {
     private AuthorService authorService;
 
     @PostMapping
-    public ResponseEntity<Author> save (@RequestParam("name") String name) {
+    public ResponseEntity<AuthorDto> save (@RequestParam("name") String name) {
         Author author = new Author();
         author.setName(name);
 
         authorService.save(author);
-        return ResponseEntity.ok(author);
+        return ResponseEntity.ok(AuthorMapper.MAPPER.authorToAuthorDto(author));
     }
 
     @DeleteMapping("{id}")
