@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class LanguageDto {
-    private String name;
+    private Long id;
+    private String languageName;
 }
