@@ -4,7 +4,6 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-!**/src/main/resources/**
 
 ### STS ###
 .apt_generated
@@ -26,4 +25,5 @@ out/
 
 ### VS Code ###
 .vscode/
-*.properties
+### PROPERTIES ###
+backend/src/main/resources/*.properties
