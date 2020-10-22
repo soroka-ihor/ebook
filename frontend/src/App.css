@@ -1,0 +1,40 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 200px 60px 400px 200px;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  "alphabet alphabet alphabet"
+  "genres main-content right-bar"
+  "footer footer footer";
+}
+.header {
+  grid-area: header;
+  background-color: aqua;
+}
+.header img {
+  height: 100%;
+  width: 100%;
+}
+.alphabet {
+  grid-area: alphabet;
+  background-color: coral;
+}
+
+.genres {
+  grid-area: genres;
+  background-color: aquamarine;
+}
+.main-content {
+  grid-area: main-content;
+  background-color: blueviolet;
+}
+.right-bar {
+  grid-area: right-bar;
+  background-color: burlywood;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: cadetblue;
+}
