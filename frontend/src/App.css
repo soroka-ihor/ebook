@@ -8,33 +8,3 @@
   "genres main-content right-bar"
   "footer footer footer";
 }
-.header {
-  grid-area: header;
-  background-color: aqua;
-}
-.header img {
-  height: 100%;
-  width: 100%;
-}
-.alphabet {
-  grid-area: alphabet;
-  background-color: coral;
-}
-
-.genres {
-  grid-area: genres;
-  background-color: aquamarine;
-}
-.main-content {
-  grid-area: main-content;
-  background-color: blueviolet;
-}
-.right-bar {
-  grid-area: right-bar;
-  background-color: burlywood;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: cadetblue;
-}

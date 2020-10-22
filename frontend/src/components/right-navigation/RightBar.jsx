@@ -1,4 +1,5 @@
 import React from 'react';
+import './RightBar.css';
 
 function RightBar() {
     return(
@@ -7,3 +8,5 @@ function RightBar() {
         </div>
     );
 }
+
+export default RightBar;
