@@ -1,4 +1,11 @@
 .genres {
-    grid-area: genres;
+    display: block;
     background-color: aquamarine;
+}
+.genres-title {
+    border: black 1px solid;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+}
+.genres-footer {
+    
 }

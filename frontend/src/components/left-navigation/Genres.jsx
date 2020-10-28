@@ -1,12 +1,20 @@
 import React from 'react';
+import Item from './item.jsx';
 import './Genre.css';
 
-function Genres() {
+function Genres(props) {
+
+    const genres = props.genres;
+    
+    const genreItems = genres.map((genre) => 
+        <li key={genre.toString()}>
+            <Item id={genre.id} name={genre.name}/>
+        </li>
+    );
+
     return(
         <nav className="genres">
-          <div>
-            <a href="">Genres</a>
-          </div>
+          <ul>{genreItems}</ul>
         </nav>
     );
 }
