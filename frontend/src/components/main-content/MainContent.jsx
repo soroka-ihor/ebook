@@ -1,10 +1,17 @@
 import React from 'react';
+import Book from './book/Book.jsx';
 import './MainContent.css';
 
-function MainContent() {
+function MainContent(props) {
+
+    const books = props.books;
+
     return(
         <div className="main-content">
-          Main content
+          main content
+          <Book />
+          <Book />
+          <Book />
         </div>
     );
 }

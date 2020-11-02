@@ -1,0 +1,9 @@
+.book {
+    display: box;
+    background-color: gray;
+    width: 800px;
+    height: 400px;
+    border: green solid 2px;
+    margin-left: auto;
+    margin-right: auto;
+}

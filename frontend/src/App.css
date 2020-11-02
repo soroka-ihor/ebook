@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
-  grid-template-rows: 200px 60px 400px 200px;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 200px 60px auto 20px;
+  grid-template-columns: 1fr 10fr 2fr;
   grid-template-areas: 
   "header header header"
   "alphabet alphabet alphabet"
