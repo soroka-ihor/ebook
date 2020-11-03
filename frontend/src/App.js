@@ -6,6 +6,7 @@ import MainContent from '../src/components/main-content/MainContent.jsx';
 import RightBar from '../src/components/right-navigation/RightBar.jsx';
 import Footer from '../src/components/footer/Footer.jsx';
 import getGenres from './services/genres.js';
+import getBooks from './services/books.js';
 import './App.css';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Header/>
         <Alphabet/>
         <Genres genres={getGenres()}/>
-        <MainContent/>
+        <MainContent books={getBooks()}/>
         <RightBar/>
         <Footer/>
       </div>

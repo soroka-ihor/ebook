@@ -4,14 +4,22 @@ import './MainContent.css';
 
 function MainContent(props) {
 
-    const books = props.books;
+    const booksArray = props.books;
+    const singlebook = booksArray.map((book) =>
+        <Book id={book.id} 
+              name={book.name}
+              genre={book.genre}
+              author={book.author} 
+              year={book.year} 
+              description={book.description}
+              cover={book.cover}
+        />
+    )
 
     return(
         <div className="main-content">
           main content
-          <Book />
-          <Book />
-          <Book />
+          {singlebook}
         </div>
     );
 }
