@@ -5,28 +5,31 @@ import com.elib.cover.model.Cover;
 import com.elib.db.BaseEntity;
 import com.elib.genre.model.Genre;
 import com.elib.language.model.Language;
+import com.elib.tag.model.Tag;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
 @EqualsAndHashCode(callSuper = true)
+@Table(name = "books")
 public class Book extends BaseEntity {
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "author_id")
     private Author author;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "genre_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "genres_id")
     private Genre genre;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "language_id")
     private Language language;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cover_id")
     private Cover cover;
 
@@ -41,4 +44,7 @@ public class Book extends BaseEntity {
 
     @Column(name = "file_name", columnDefinition = "varchar(50)")
     private String fileName;
+
+    @OneToMany(mappedBy = "book", targetEntity = Tag.class, cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    private List<Tag> tags;
 }

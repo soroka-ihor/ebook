@@ -4,10 +4,12 @@ import lombok.Data;
 
 @Data
 public class BookDto {
+    private Long id;
+    private String genre;
     private String name;
-    private String fileName;
-    private Long genre_id;
-    private Long author_id;
-    private Long language_id;
-    private Long cover_id;
+    private String author;
+    private int year;
+    private String language;
+    private String description;
+    private String contentUrl;
 }

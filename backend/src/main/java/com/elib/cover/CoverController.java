@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:8082")
+@CrossOrigin("http://localhost:3000")
 public class CoverController {
 
     @Autowired

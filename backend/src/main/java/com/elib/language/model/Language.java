@@ -14,8 +14,7 @@ import java.util.Set;
 @Table(name = "languages")
 public class Language extends BaseEntity {
 
-    @OneToMany(targetEntity = Book.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "book_id_fk", referencedColumnName = "id")
+    @OneToMany(mappedBy = "language")
     private Set<Book> books;
 
 }
