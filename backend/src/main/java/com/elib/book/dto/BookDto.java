@@ -12,4 +12,5 @@ public class BookDto {
     private String language;
     private String description;
     private String contentUrl;
+    private Long coverId;
 }

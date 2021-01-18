@@ -19,6 +19,7 @@ public interface BookMapper {
     @Mapping(source = "language.name", target = "language")
     @Mapping(source = "description", target = "description")
     @Mapping(source = "fileName", target = "contentUrl")
+    @Mapping(source = "cover.id", target = "coverId")
     BookDto bookToBookDto(Book book);
 
 }
